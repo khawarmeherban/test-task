@@ -1,6 +1,9 @@
 <template>
   <div class="container">
-    <h3>Second Page</h3>
+    <div class="header">
+      <span @click="$router.go(-1)"> &lt; </span>
+      <h3>Second Page</h3>
+    </div>
     <div>
       <div class="card">
         <h1>{{ pageTitle }}</h1>

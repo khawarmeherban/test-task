@@ -1,6 +1,9 @@
 <template>
   <div class="container">
-    <h3>First Page</h3>
+    <div class="header">
+      <h3>First Page</h3>
+       <span @click="$router.push('/secondPage')"> > </span>
+    </div>
     <div>
       <div class="card">
         <h1>{{ pageTitle }}</h1>
@@ -56,6 +59,23 @@ export default {
   align-items: center;
   flex-direction: column;
   justify-content: center;
+}
+.header {
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.header span {
+  font-weight: 800;
+  font-size: 24px;
+  color: rgb(38, 37, 37);
+}
+.header > span:hover {
+  color: #343434;
+  transform: scale(1);
+  cursor: pointer;
+  transition: font-size .3se ease-in-out;
 }
 .container > div {
   display: flex;
